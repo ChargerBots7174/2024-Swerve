@@ -38,25 +38,10 @@ constexpr int kRearLeftTurningMotorPort = 3;
 constexpr int kFrontRightTurningMotorPort = 5;
 constexpr int kRearRightTurningMotorPort = 7;
 
-constexpr int kFrontLeftTurningEncoderPorts[2]{0, 1};
-constexpr int kRearLeftTurningEncoderPorts[2]{2, 3};
-constexpr int kFrontRightTurningEncoderPorts[2]{4, 5};
-constexpr int kRearRightTurningEncoderPorts[2]{6, 7};
-
-constexpr bool kFrontLeftTurningEncoderReversed = false;
-constexpr bool kRearLeftTurningEncoderReversed = true;
-constexpr bool kFrontRightTurningEncoderReversed = false;
-constexpr bool kRearRightTurningEncoderReversed = true;
-
-constexpr int kFrontLeftDriveEncoderPorts[2]{8, 9};
-constexpr int kRearLeftDriveEncoderPorts[2]{10, 11};
-constexpr int kFrontRightDriveEncoderPorts[2]{12, 13};
-constexpr int kRearRightDriveEncoderPorts[2]{14, 15};
-
-constexpr bool kFrontLeftDriveEncoderReversed = false;
-constexpr bool kRearLeftDriveEncoderReversed = true;
-constexpr bool kFrontRightDriveEncoderReversed = false;
-constexpr bool kRearRightDriveEncoderReversed = true;
+constexpr int kEncoderTurnFrontRightID = 8;
+constexpr int kEncoderTurnRearRightID = 9;
+constexpr int kEncoderTurnFrontLeftID = 10;
+constexpr int kEncoderTurnRearLeftID = 11;
 
 // These are example values only - DO NOT USE THESE FOR YOUR OWN ROBOT!
 // These characterization values MUST be determined either experimentally or

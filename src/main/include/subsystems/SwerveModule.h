@@ -14,14 +14,13 @@
 #include <frc/kinematics/SwerveModuleState.h>
 #include <frc/motorcontrol/Spark.h>
 #include <frc/trajectory/TrapezoidProfile.h>
+#include <ctre/Phoenix.h>
 
 #include "Constants.h"
 
 class SwerveModule {
  public:
-  SwerveModule(int driveMotorChannel, int turningMotorChannel,
-               const int driveEncoderPorts[2], const int turningEncoderPorts[2],
-               bool driveEncoderReversed, bool turningEncoderReversed);
+  SwerveModule(int driveMotorChannel, int turningMotorChannel, int turningEncoderPort);
 
   frc::SwerveModuleState GetState();
 
@@ -41,11 +40,11 @@ class SwerveModule {
   static constexpr auto kModuleMaxAngularAcceleration =
       units::radians_per_second_squared_t{std::numbers::pi * 2.0};
 
-  frc::Spark m_driveMotor;
-  frc::Spark m_turningMotor;
+  WPI_TalonFX m_driveMotor;
 
-  frc::Encoder m_driveEncoder;
-  frc::Encoder m_turningEncoder;
+  WPI_TalonFX m_turningMotor;
+
+  WPI_CANCoder m_turningEncoder;
 
   bool m_reverseDriveEncoder;
   bool m_reverseTurningEncoder;
